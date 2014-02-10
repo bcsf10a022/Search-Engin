@@ -1,0 +1,61 @@
+﻿
+<link href="~/Scripts/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+
+@model Online_Book_Store_Project.Models.User
+
+<div id="templatemo_container">
+    <div id="templatemo_content_right">
+    <div class="templatemo_product_box">
+
+        <h1> Sign Up</h1>
+        <form action="/SignUp/Save"  method="post">
+            <fieldset>
+
+                <label> Enter UserName </label><br />
+                <input type="text" name="User" required/><br />
+
+                <label> Enter PAssword </label><br />
+                <input type="password" name="Password" required/><br />
+
+                <input type="submit" name="save" />
+            </fieldset>
+        </form>
+        </div>
+        </div>
+</div>
+
+@*@using (Html.BeginForm("Save","SignUp",FormMethod.Post))  
+{       
+     @Html.ValidationSummary(true)
+
+             	<h1>Sign Up</h1>
+     <fieldset>
+        <div class="editor-label">
+           
+            @Html.Label("Enter Name")
+        </div>
+        <div class="editor-field" >
+            @Html.EditorFor(model => model.Name,new {@class ="span3" , required = "required"})
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Enter UserName")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Username)
+            @Html.ValidationMessageFor(model => model.Username)
+        </div>
+
+         <div class="editor-label">
+            @Html.Label("Enter Password")
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model=>Model.Password)
+        </div>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>
+}*@

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body id="data">
+    <div id="templatemo_container">
+
+    <div id="templatemo_menu">
+    	<ul>
+            <li><a href="/Home/Index"class="current">Home</a></li>
+            <li><a href="/Search/IndexSearch" class="current">Search</a></li>
+            <li><a href="/Book/IndexBook"class="current">Books</a></li>              
+            <li><a href="#"class="current">Contact</a></li>
+            <li><a href="#"class="current">About</a></li>
+            <li><a href="/Upload/Upload"class="current">Upload</a></li>
+            <li><a  href="#" class="current"> Help </a></li>
+            <li> <a href="/SignUp/SignUP"class="current">SignUp</a></li>
+            <li> <a href ="/Home/log" class="current" id="ppp">LogIn</a></li>
+            <li> <a href="/Home/LogOut" class="current">LogOut</a></li>
+    	</ul>
+    </div> <!-- end of menu -->
+        <div id="templatemo_header">
+    	<div id="templatemo_special_offers">
+        	<p>
+                <span style="background-color:red">25%</span>discounts on purchase Books in <br />Rabi ul Awal Month
+        	</p>
+        </div>
+        
+        
+        <div id="templatemo_new_books">
+        	<ul>
+                <li> Quran </li>
+                <li> Hadess</li>
+                <li>Allama Iqbal</li>
+                <li> Allama Jalal-ul-din</li>
+                <li>Allama Ahmad Raza Khan</li>
+            </ul>
+        </div>
+    </div> <!-- end of header -->
+
+    <div id="templatemo_content">
+    	
+        <div id="templatemo_content_left">
+        	<div class="templatemo_content_left_section">
+            	<h1>Categories</h1>
+                <ul>
+                    <li><a href="/Book/Quran">Quran</a></li>
+                    <li><a href="/Book/Hadees">Hadees</a></li>
+                    <li><a href="/Book/OtherIslamic">Other Islamic Book</a></li>
+            	</ul>
+            </div>
+        </div> <!-- end of content left -->
+   
+  
+    <div >
+        @RenderBody()
+    </div>
+        <!-- end of templatemo-_content -->
+     </div>
+    <div id="templatemo_footer">
+    
+	       <a href="/Home/Index">Home</a> | <a href="/Search/IndexSearch">Search</a> | <a href="/Book/IndexBook">Books</a> | <a href="#">Contact</a> | <a href="#">About</a> | <a href="#">Help</a><br />
+        Copyright © 2048 
+    </div>
+    <div align=center>Online Islamic Book Store </div>
+
+</div>   
+</body>
+</html>

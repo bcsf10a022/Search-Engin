@@ -1,0 +1,29 @@
+﻿<link href="~/Scripts/templatemo_style.css" rel="stylesheet" type="text/css" />
+@*<style type="text/css">
+    .t
+    {
+        background:#FFFFFF url(images/Lock.png) no-repeat 4px 4px;
+        padding:2px 2px 2px 10px;
+        height:30px;
+        width:150px;
+
+    }
+</style>*@
+<div id="templatemo_container">
+    <div id="templatemo_content_right">
+    <div class="templatemo_product_box">
+            	<h1>Sign In</h1>
+    <form action="/Home/Check" method="post">
+    <div class="grid_3 alpha omega"/>
+    <div><label>User Name</label> </div>
+    <div><input type="text"  name="username" required/></div>
+    <div><label  > Password </label></div>
+    <div><input type="password" name="password" required/></div>
+    <input type="submit" value="Ok"/>
+    </form>
+            <strong style ="background-color:red">@ViewBag.Show</strong>
+       
+    </div>
+    </div>
+</div>
+

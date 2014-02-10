@@ -1,0 +1,50 @@
+﻿
+@model Online_Book_Store_Project.Models.Book
+
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+
+$(document).ready(function () 
+{
+    $("#b").click(function ()
+    {
+        var d = document.getElementById("d");
+        if (d.value) {
+            $.getJSON("/Book/getData?name=" + d.value, function (data)
+            {
+                if (data == null)
+                    alert("Record is not found");
+                $("#ddd").append('');
+               // $.each(data, function (i, item) {
+
+                $('#ddd').append('<strong>' + data.Name + '<strong>')
+
+                $('#ddd').append('<a href=' + "../Book/DownloadFile?name=" + data.Name + '>' + "      :   Download" + '</a>');
+                $('#ddd').append('<br/>');
+               // });
+            });
+        }
+        else
+            alert("Filed is empty");
+
+      });
+
+});
+</script>
+
+      
+
+
+<link href="~/Scripts/templatemo_style.css" rel="stylesheet" type="text/css" />
+<div id="templatemo_container">
+    <div id="templatemo_content_right">
+  <div class="templatemo_product_box" id ="data">
+            	<h1>Search Book By Name</h1>
+        Enter Book Name is : <input type="text" name="book" id="d" value=""/>
+        <center><input type="button" value="Ok" id="b" /></center>
+       
+      <fieldset id="ddd" style="background-color:green"></fieldset>
+   </div>
+ </div>
+</div> <!-- end of container -->

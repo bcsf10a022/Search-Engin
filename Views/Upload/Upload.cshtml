@@ -1,0 +1,35 @@
+﻿<link href="~/Scripts/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+
+@model Online_Book_Store_Project.Models.Book
+
+<div id="templatemo_container">
+ <div id="templatemo_content_right">
+     <div class="templatemo_product_box">
+            	<h1>Upload File</h1>
+
+    <form action="Save" method="post" enctype="multipart/form-data"  >
+        <label> Enter Book Name</label><br />
+        <input type="text" name="Book" required /><br />
+        <label> Enter Author Name</label><br />
+        <input type="text" name="Name" required /><br />
+        <label> Enter Price of Book</label><br />
+        <input type="text" name="Price" required /><br />
+        <label> Enter Catagory OF Book</label><br />
+        <input type="text" name="C" required /><br />
+       @* @Html.Label("Enter Book Name")<br />
+        @Html.TextBoxFor(model => Model.Name)<br />
+        @Html.Label("Enter Author of Book")<br />
+        @Html.TextBoxFor(model => Model.Author)<br />
+        @Html.Label("Enter Price of Book")<br />
+        @Html.TextBoxFor(model => Model.Price)<br />
+        @Html.Label("Enter Catagory of Book")<br />
+        @Html.TextBoxFor( mocdel => Model.Catagory_)<br />*@
+
+        <div><input type="file" name="image" required />
+        <input type="submit" value="upload" /></div>
+
+   </form>
+</div>
+     </div>
+</div>

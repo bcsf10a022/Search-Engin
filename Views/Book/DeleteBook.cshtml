@@ -1,0 +1,33 @@
+﻿
+@model List<Online_Book_Store_Project.Models.Book>
+
+
+<link href="~/Scripts/templatemo_style.css" rel="stylesheet" type="text/css" />
+<div id="templatemo_container">
+
+  <div id="templatemo_content_right">
+      @{
+          int i = 0; 
+      } 
+     @foreach (var item in Model)
+      {
+          i++;
+        <div class="templatemo_product_box">
+            	<h1> @item.Name  <span>(by @item.Author)</span></h1>
+   	      <img src="/Images/templatemo_image_01.jpg" alt="image" />
+                <div class="product_info">
+                	
+                  <h3>$@item.Price</h3>
+                    <div class="buy_now_button"><a href= "../Book/DownloadFile?name=@item.Name" > Download</a></div>
+                  </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+         if( i % 2 == 0 )
+         {
+            <div class="cleaner_with_height">&nbsp;</div>
+            }
+     }    
+    </div>     
+ </div> <!-- end of container -->
